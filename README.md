@@ -1,3 +1,5 @@
+[![Docker React Demo Image CI](https://github.com/eclecticjohny/docker-react-demo/actions/workflows/docker-image.yml/badge.svg)](https://github.com/eclecticjohny/docker-react-demo/actions/workflows/docker-image.yml)
+
 # Docker Notes
 
 First -v flag is for using a dir that exists in the container.
