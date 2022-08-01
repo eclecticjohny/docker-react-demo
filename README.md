@@ -1,3 +1,12 @@
+# Docker Notes
+
+First -v flag is for using a dir that exists in the container.
+Second -v flag is for mapping a local dir to a dir in the container.
+
+docker run -p 3000:3000 -v/usr/app/node_modules -v$(pwd):/usr/app 52d234525f44
+
+docker exec -it 52d234525f44 npm run test
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

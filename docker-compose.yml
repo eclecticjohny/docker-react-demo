@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build: 
+      context: '.'
+      dockerfile: 'Dockerfile.dev'
+    ports:
+      - '3000:3000'
+    volumes:
+      - 'node_modules:/usr/app/node_modules'
+      - '.:/usr/app'
+volumes:
+  node_modules:
+    external: false
