@@ -1,0 +1,22 @@
+name: Docker React Demo Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile.dev --tag eclecticjohny/docker-react-demo
+    - name: Run the test suite
+      run: docker run -e CI=true eclecticjohny/docker-react-demo npm run test
+      
+# --tag my-image-name:$(date +%s)
